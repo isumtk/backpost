@@ -1,0 +1,22 @@
+Space Cadet : #2B2D42 // Black
+Onyx : #37393A // Black
+Rich Black : #080708
+
+Cultured : #EDF2F4 // White
+Baby Powder : #FDFFFC // White
+Magnolia : #EFE9F4 
+White BG : #FCFAFA
+
+Tiffany Blue : #2EC4B6 // Teal
+Blue Sapphire : #326273
+
+Bleu de France : #1789FC // Blue
+
+Honey Yellow : #FDB833 // Yellow
+Corn : #F5E663
+
+Light Green : #7CDF64 
+Emerald : #2DD881
+Illuminating Emerald : #439A86
+
+Pink: #F50076
