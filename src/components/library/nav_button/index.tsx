@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 
 const NavButton = (props: any) => {
-  const { isActive, defaultSrc, activeSrc, href } = props;
+  const { isActive, href, title } = props;
 
   const router = useRouter();
 
@@ -10,11 +10,13 @@ const NavButton = (props: any) => {
   };
 
   return (
-    <div onClick={handleOnClick}>
-      <img
-        src={isActive ? activeSrc : defaultSrc}
-        className={"h-8 w-8 bg-rose-400 object-contain"}
-      />
+    <div
+      onClick={handleOnClick}
+      className={`nav_button_default ${
+        isActive ? "text-indigo-500" : "text-slate-400 hover:text-slate-600"
+      }`}
+    >
+      <h2 className="text-lg font-medium">{title}</h2>
     </div>
   );
 };

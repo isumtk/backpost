@@ -1,4 +1,6 @@
 @import "./main-layout.css";
+@import "./custom-containers.css";
+@import "./buttons.css";
 
 @tailwind base;
 @tailwind components;

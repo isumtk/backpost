@@ -1,0 +1,9 @@
+.nav_action_button {
+  @apply mx-2 flex h-10;
+  @apply cursor-pointer items-center;
+  @apply rounded-full bg-teal-500 px-4 text-neutral-50;
+}
+
+.nav_button_default {
+  @apply mx-1 flex cursor-pointer rounded-lg px-1 py-2;
+}

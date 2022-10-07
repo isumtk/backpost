@@ -1,0 +1,6 @@
+.container_custom {
+  @apply sm:mx-auto sm:w-full sm:px-3;
+  @apply md:mx-auto md:w-full md:px-5;
+  @apply lg:mx-auto lg:w-5/6 lg:px-5;
+  @apply xl:mx-auto xl:w-5/6;
+}
