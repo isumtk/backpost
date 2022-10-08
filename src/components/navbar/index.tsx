@@ -1,8 +1,7 @@
 import NavActionButton from "../library/nav_action_button";
 import NavButton from "../library/nav_button";
-
 const Navbar = (props: any) => {
-  const { activeTab } = props;
+  const { activeTab, registred, userdata } = props;
   return (
     <div className="h-full w-full bg-white">
       <div className="container_custom mx-auto flex h-full items-center px-4">
@@ -14,11 +13,13 @@ const Navbar = (props: any) => {
             isActive={activeTab === "home"}
           />
 
-          {/* <NavButton
-            href={"/messages"}
-            title={"Notifications"}
-            isActive={activeTab === "messages"}
-          /> */}
+          {registred && (
+            <NavButton
+              href={"/messages"}
+              title={"Notifications"}
+              isActive={activeTab === "messages"}
+            />
+          )}
 
           <NavButton
             href={"/write"}
@@ -32,7 +33,11 @@ const Navbar = (props: any) => {
             isActive={activeTab === "about"}
           />
 
-          <NavActionButton title={"Sign in"} />
+          {registred ? (
+            <div className=" ml-2 flex h-8 w-20 items-center"></div>
+          ) : (
+            <NavActionButton title={"Sign in"} />
+          )}
         </div>
       </div>
     </div>

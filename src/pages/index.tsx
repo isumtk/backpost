@@ -2,6 +2,7 @@ import Head from "next/head";
 import { ReactElement } from "react";
 import Main from "../components/layout/main";
 import { NextPageWithLayout } from "./_app";
+import Script from "next/script";
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -17,7 +18,11 @@ const Home: NextPageWithLayout = () => {
 };
 
 Home.getLayout = function getLayout(page: ReactElement) {
-  return <Main activeTab={"home"}>{page}</Main>;
+  return (
+    <Main activeTab={"home"} registred={true}>
+      {page}
+    </Main>
+  );
 };
 
 export default Home;
