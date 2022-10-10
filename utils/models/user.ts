@@ -15,7 +15,8 @@ interface IUser {
 const userSchema = new mongoose.Schema<IUser>({
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
-  email: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
   dob: { type: String },
   profile: { type: String },
   twitter: { type: String },
@@ -23,6 +24,5 @@ const userSchema = new mongoose.Schema<IUser>({
   instagram: { type: String },
 });
 
-const User = model<IUser>("User", userSchema);
-
+const User = mongoose.model("User", userSchema);
 export default User;

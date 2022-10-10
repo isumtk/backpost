@@ -10,8 +10,11 @@ async function connectDB() {
     return;
   }
 
-  const db = await mongoose.connect(process.env.MONGODB_URL as string);
+  const db = await mongoose.connect(`${process.env.MONGODB_URL}`);
   connection.isConnected = db.connections[0].readyState;
+  if (connection.isConnected) {
+    console.log("Connected to DB");
+  } else console.log("Couldn't connect to DB.");
 }
 
 export default connectDB;
