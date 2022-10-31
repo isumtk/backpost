@@ -6,6 +6,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     connectDB();
     try {
+      const body = req.body;
+      console.log(body);
       const user = await User.create(req.body);
       if (!user) {
         return res.json("User not created");
